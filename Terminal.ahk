@@ -3,7 +3,5 @@
 SendMode Input
 SetWorkingDir C:\Users\Theseus\Documents\CS
 
-#InstallKeybdHook
-
-^+k::
-KeyHistory
+^+t::
+Run wt -p "PS7"

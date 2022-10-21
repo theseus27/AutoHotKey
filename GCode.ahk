@@ -1,12 +1,9 @@
-#NoEnv  ;
+#NoEnv
 #SingleInstance Force
-;#Warn
 SendMode Input
 SetWorkingDir C:\Users\Theseus\Documents\CS\gcode
 
-loop {
-Sleep 1000
-^g::
+^+g::
 Send, #^d
 Send, #^{LCtrl}
 Send, #^{LCtrl}
@@ -18,7 +15,3 @@ Send, {Shift Down}
 Run, microsoft-edge:https://localhost:3000
 Send, {Shift Up}
 Run, microsoft-edge:https://localhost:8000
-return
-}
-
-#^x::ExitApp

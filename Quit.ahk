@@ -14,12 +14,13 @@ getFiles(Folder)
   }
 }
 
-^+u::
-
-;Kill Running Processes
+^+q::
   WinGet, id, list, ahk_class AutoHotkey
+  running := 0
+
   Loop, %id%
   {
+    running++
     this_ID := id%A_Index%
     WinGetTitle, title, ahk_id %this_ID%
     SkriptPath := RegExReplace(title, " - AutoHotkey v" A_AhkVersion)
@@ -28,13 +29,15 @@ getFiles(Folder)
     WinClose, %SkriptPath% ahk_class AutoHotkey
   }
 
-;Start Scripts
-  scripts := []
-  getFiles("C:\Users\Theseus\Documents\AutoHotKey")
-  Loop % scripts.Length() {
-      script := % scripts[A_Index]
-      Run %script%
+  if (running < 2) {
+    scripts := []
+    getFiles("C:\Users\Theseus\Documents\AutoHotKey")
+    Loop % scripts.Length() {
+        script := % scripts[A_Index]
+        Run %script%
+    }
+    MsgBox, "AHK Resumed"
   }
-
-  MsgBox % "Reloaded " scripts.Length() . " AHK Scripts."
-  Reload
+  else {
+    MsgBox, "AHK Paused"
+  }
