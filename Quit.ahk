@@ -30,14 +30,14 @@ getFiles(Folder)
   }
 
   if (running < 2) {
+    MsgBox, "Running AHK"
     scripts := []
     getFiles("C:\Users\Theseus\Documents\AutoHotKey")
     Loop % scripts.Length() {
         script := % scripts[A_Index]
         Run %script%
     }
-    MsgBox, "AHK Resumed"
   }
   else {
-    MsgBox, "AHK Paused"
+    MsgBox, "Pausing AHK"
   }

@@ -1,7 +1,7 @@
 #NoEnv
 #SingleInstance Force
 SendMode Input
-SetWorkingDir C:\Users\Theseus\Documents\CS\gcode
+SetWorkingDir C:\Users\Theseus\Documents\CS\projects\gcode
 
 ^+g::
 Send, #^d
