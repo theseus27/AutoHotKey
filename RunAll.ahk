@@ -36,5 +36,5 @@ getFiles(Folder)
       Run %script%
   }
 
-  MsgBox % "Reloaded " scripts.Length() . " AHK Scripts."
+  MsgBox % "Running " scripts.Length() . " scripts."
   Reload
