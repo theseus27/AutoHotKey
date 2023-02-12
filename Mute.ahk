@@ -5,7 +5,7 @@ SetWorkingDir C:\Users\Theseus\Documents\CS
 
 loop {
 Sleep 1000
-^+m::
+^!m::
 SoundGet, isMuted,, Mute
 
 If isMuted -eq Off {

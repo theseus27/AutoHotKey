@@ -5,5 +5,5 @@ SetWorkingDir C:\Users\Theseus\Documents\CS
 
 #InstallKeybdHook
 
-^+k::
+^!k::
 KeyHistory

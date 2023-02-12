@@ -3,7 +3,7 @@
 SendMode Input
 SetWorkingDir C:\Users\Theseus\Documents\CS\projects\gcode
 
-^+g::
+^!g::
 Send, #^d
 Send, #^{LCtrl}
 Send, #^{LCtrl}

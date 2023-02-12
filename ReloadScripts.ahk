@@ -14,7 +14,7 @@ getFiles(Folder)
   }
 }
 
-^+u::
+^!r::
 
 ;Kill Running Processes
   WinGet, id, list, ahk_class AutoHotkey

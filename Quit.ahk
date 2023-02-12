@@ -14,7 +14,7 @@ getFiles(Folder)
   }
 }
 
-^+q::
+^!q::
   WinGet, id, list, ahk_class AutoHotkey
   running := 0
 

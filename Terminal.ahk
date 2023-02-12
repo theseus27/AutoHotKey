@@ -3,5 +3,5 @@
 SendMode Input
 SetWorkingDir C:\Users\Theseus\Documents\CS
 
-^+t::
+^!t::
 Run wt -p "PS7"
